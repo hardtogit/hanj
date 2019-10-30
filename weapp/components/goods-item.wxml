@@ -1,0 +1,7 @@
+
+<view class="goodsItem">
+  <image class="img">
+  </image>
+  <view class="name">商品名称</view>
+  <view class="code">500积分</view>
+</view>

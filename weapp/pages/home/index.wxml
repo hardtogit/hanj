@@ -1,0 +1,67 @@
+
+<view class="home">
+  <view class="header">
+    <swiper autoplay="{{ true }}">
+      <swiper-item>
+        <view style="background-color: red;height: 160px"></view>
+      </swiper-item>
+      <swiper-item>
+        <view style="background-color: blue;height: 160px"></view>
+      </swiper-item>
+    </swiper>
+    <view class="tabs">
+      <view class="tab left">
+        <view class="plane">
+          <view class="left">
+            <image src="http://49.235.226.232/cgi-bin/download.pl?fid=f15724322237033360004001&proj=pc" class="img"></image>
+          </view>
+          <view class="right">
+            <view class="label">人找车</view>
+            <view class="char">Looking for a car</view>
+          </view>
+        </view>
+      </view>
+      <view class="tab right">
+        <view class="plane">
+          <view class="left">
+            <image src="http://49.235.226.232/cgi-bin/download.pl?fid=f15724322237033360004001&proj=pc" class="img"></image>
+          </view>
+          <view class="right">
+            <view class="label">车找人</view>
+            <view class="char">Looking for a person</view>
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <view class="searchBar">
+      <view class="timeBar">
+        <view class="label">出发时间：</view> <picker mode="date" value="{{startDate}}" data-wpy-evt="7-94" bindchange="_proxy" class="dateItem">
+        <view class="datePicker">
+          {{startDate}}
+        </view>
+      </picker>
+       <view class="char">-</view>
+        <picker mode="date" value="{{endDate}}" data-wpy-evt="7-95" bindchange="_proxy" class="dateItem">
+          <view class="datePicker">
+            {{endDate}}
+          </view>
+        </picker>
+      </view>
+      <view class="addressBar">
+        <view class="left">
+          出发城市
+        </view>
+        <image src="http://49.235.226.232/cgi-bin/download.pl?fid=f15724419593777110576001&proj=pc" class="center">
+        </image>
+        <view class="right">
+          到达城市
+        </view>
+      </view>
+      <view class="search">
+        搜索
+      </view>
+
+    </view>
+  </view>
+</view>

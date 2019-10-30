@@ -1,0 +1,214 @@
+<style lang="less" scoped>
+  .header{
+    height: 200px;
+    width: 100%;
+    background: url("http://47.96.88.157/cgi-bin/download.pl?fid=f15722458908924939632001&proj=rrd");
+    background-size: 100% 100%;
+    display: flex;
+    .left{
+      width: 105px;
+    }
+    .right{
+      flex: 1;
+      padding-left: 20px;
+      color: #fff;
+      font-size: 15px;
+      .item{
+        margin-top: 25px;
+        .label{
+          display: block;
+        }
+      }
+    }
+  }
+  .bar{
+    width:345px;
+    height:60px;
+    box-shadow:0px 1.5px 8px 0px rgba(0, 0, 0, 0.09);
+    border-radius:10px;
+    display: flex;
+    margin: -30px auto 0 auto;
+    background-color: #fff;
+    .left{
+      flex: 1;
+      display: flex;
+      align-items: center;
+      .img{
+        width: 20px;
+        height: 20px;
+        margin-left: 15px;
+      }
+      .label{
+        margin-left: 10px;
+      }
+      .num{
+        margin-left: 2px;
+        color: #FCAC45;
+      }
+    }
+    .right{
+      flex: 1;
+      display: flex;
+      align-items: center;
+      .img{
+        width: 20px;
+        height: 20px;
+        margin-left: 15px;
+      }
+      .label{
+        margin-left: 10px;
+      }
+      .num{
+        margin-left: 2px;
+        color: #FCAC45;
+      }
+    }
+  }
+  .content{
+    display: flex;
+    width: 100%;
+    padding-top: 48px;
+    .left{
+      flex: 1;
+      text-align: center;
+      .img{
+        width: 22px;
+        height: 22px;
+      }
+      .text{
+        font-size: 12px;
+        color: #666;
+        margin-top: 6px;
+      }
+    }
+    .right{
+      flex: 1;
+      text-align: center;
+      .img{
+        width: 18px;
+        height: 22px;
+      }
+      .text{
+        font-size: 12px;
+        color: #666;
+        margin-top: 6px;
+      }
+    }
+  }
+  .baseModal{
+    .title{
+      font-size: 21px;
+      margin-top: 12px;
+      color: #333;
+      text-align: center;
+    }
+  }
+</style>
+<template>
+  <view class="container">
+    <view class="header">
+      <view class="left">
+
+      </view>
+      <view class="right">
+        <view class="item">
+          <view class="label">手机号：</view>
+          <view class="value">12433567876</view>
+        </view>
+        <view class="item">
+          <view class="label">
+            贷款编号：
+          </view>
+          <view class="value">
+            536665666666
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="bar">
+      <view class="left">
+        <image class="img" src="http://47.96.88.157/cgi-bin/download.pl?fid=f15722466230771019458001&proj=rrd"></image>
+        <span class="label">额度:</span>
+        <span class="num">3274</span>
+      </view>
+      <view class="right">
+        <image class="img" src="http://47.96.88.157/cgi-bin/download.pl?fid=f15722466230771019458001&proj=rrd"></image>
+        <view class="label">可用额度:</view>
+        <view class="num">3274</view>
+      </view>
+    </view>
+    <view class="content">
+      <view class="left">
+        <image class="img" src="http://47.96.88.157/cgi-bin/download.pl?fid=f15722467446921908855001&proj=rrd"></image>
+        <view class="text">建议意见</view>
+      </view>
+      <view class="right">
+        <image class="img" src="http://47.96.88.157/cgi-bin/download.pl?fid=f15722467671039819717001&proj=rrd"></image>
+        <view class="text">客服中心</view>
+      </view>
+    </view>
+    <myModal ref="warn" title="用户隐私保护提醒">
+       <view>用户隐私保护提醒</view>
+    </myModal>
+    <myModal ref="info" title="提示">
+      <view>您的贷款申请信息已提交，将在20分钟 内审核，并给予额度，届时将于短信方 式通知。</view>
+    </myModal>
+    <baseModal ref="login">
+      <view class="baseModal">
+        <view class="title">
+          登录
+        </view>
+        <view  class="phone">
+          <view class="icon">
+
+          </view>
+          <input type="number">
+        </view>
+      </view>
+    </baseModal>
+  </view>
+</template>
+
+<script>
+  // http://47.96.88.157/cgi-bin/download.pl?fid=f15722660413729550838001&proj=rrd
+  // http://47.96.88.157/cgi-bin/download.pl?fid=f15722662580729939937001&proj=rrd
+  // http://47.96.88.157/cgi-bin/download.pl?fid=f15722663048360419273001&proj=rrd
+  // http://47.96.88.157/cgi-bin/download.pl?fid=f15722668533610980510001&proj=rrd
+
+  import wepy from '@wepy/core'
+  import { mapState } from '@wepy/x';
+  import store from '../../store';
+
+  wepy.page({
+    store,
+    data: {
+    },
+
+    computed: {
+      ...mapState([ 'counter' ])
+    },
+
+    methods: {
+      showWarn(){
+        console.log(this.$refs)
+        // this.$refs.warn.show()
+      this.$refs.login.show()
+
+      }
+    },
+     onShow() {
+
+      this.showWarn()
+    }
+  });
+</script>
+<config>
+{
+  navigationBarTitleText: '个人中心',
+  navigationBarBackgroundColor: '#FFBB41',
+    usingComponents: {
+      myModal: '~@/components/modal',
+    baseModal: '~@/components/base-modal'
+    }
+}
+</config>

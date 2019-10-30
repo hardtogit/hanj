@@ -1,0 +1,9 @@
+
+<view hidden="{{ !(visible) }}" class="model">
+  <view class="container">
+    <slot></slot>
+  </view>
+  <view class="bg">
+
+  </view>
+</view>

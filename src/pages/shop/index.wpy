@@ -1,0 +1,51 @@
+<style lang="less" scoped>
+  .shop{
+    padding:12px 6px 10px 6px;
+  }
+
+</style>
+<template>
+ <div class="shop">
+   <goodsItem />
+   <goodsItem />
+   <goodsItem />
+   <goodsItem />
+ </div>
+</template>
+
+<script>
+  import wepy from '@wepy/core'
+  import { mapState } from '@wepy/x';
+  import store from '../../store';
+
+  wepy.page({
+    store,
+    data: {
+    },
+
+    computed: {
+      ...mapState([ 'counter' ])
+    },
+
+    methods: {
+      showWarn(){
+        console.log(this.$refs)
+        // this.$refs.warn.show()
+      this.$refs.login.show()
+
+      }
+    },
+     onShow() {
+
+      this.showWarn()
+    }
+  });
+</script>
+<config>
+{
+  navigationBarTitleText: '积分商城',
+    usingComponents: {
+      goodsItem: '~@/components/goods-item',
+    }
+}
+</config>

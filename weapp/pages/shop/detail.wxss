@@ -1,0 +1,85 @@
+page {
+  background-color: #eee;
+}
+.detail .swiper {
+  height: 340px;
+}
+.detail .content {
+  padding: 15px;
+  background-color: #fff;
+}
+.detail .content .name {
+  color: #333;
+  font-size: 15px;
+}
+.detail .content .dis {
+  color: #999;
+  font-size: 13px;
+  margin-top: 15px;
+}
+.detail .content .bar {
+  display: flex;
+  margin-top: 20px;
+}
+.detail .content .bar .left {
+  flex: 1;
+  text-align: left;
+  color: #E2231A;
+  font-size: 18px;
+}
+.detail .content .bar .right {
+  flex: 1;
+  text-align: right;
+}
+.detail .content .bar .right .count {
+  display: inline-block;
+}
+.detail .content .bar .right .count .sub {
+  display: inline-block;
+  font-size: 16px;
+  text-align: center;
+  width: 25px;
+  height: 25px;
+  background-color: #ebebeb;
+  color: #999;
+}
+.detail .content .bar .right .count .num {
+  display: inline-block;
+  font-size: 15px;
+  min-width: 25px;
+  color: #333;
+  /*padding: 0 8px;*/
+  text-align: center;
+}
+.detail .content .bar .right .count .add {
+  display: inline-block;
+  text-align: center;
+  width: 25px;
+  height: 25px;
+  background-color: #ebebeb;
+  color: #999;
+}
+.detail .bottom {
+  height: 49px;
+  position: fixed;
+  display: flex;
+  bottom: 0;
+  width: 100%;
+  color: #fff;
+  align-items: center;
+}
+.detail .bottom .left {
+  width: 150px;
+  height: 49px;
+  line-height: 49px;
+  text-align: center;
+  background-color: #999;
+}
+.detail .bottom .right {
+  flex: 1;
+  height: 49px;
+  line-height: 49px;
+  text-align: center;
+  background-color: #E2231A;
+}
+

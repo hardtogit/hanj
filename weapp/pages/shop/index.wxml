@@ -1,0 +1,7 @@
+
+<view class="shop">
+  <goodsItem bind_init="_initComponent"></goodsItem>
+  <goodsItem bind_init="_initComponent"></goodsItem>
+  <goodsItem bind_init="_initComponent"></goodsItem>
+  <goodsItem bind_init="_initComponent"></goodsItem>
+</view>

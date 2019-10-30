@@ -1,0 +1,240 @@
+<style lang="less" scoped>
+.header{
+  padding: 15px;
+  .tabs{
+    margin-top: 15px;
+    display: flex;
+    height: 70px;
+    align-items: center;
+    .tab{
+      flex: 1;
+      &.left{
+        padding-right: 7px;
+        .plane{
+          background-color: #FFB023;
+          border-radius: 5px;
+          height: 70px;
+          display: flex;
+          align-items: center;
+          .left{
+            width: 75px;
+            .img{
+              width: 35px;
+              height: 35px;
+              display: block;
+              margin: 0 auto;
+            }
+          }
+          .right{
+            color: #fff;
+            flex: 1;
+            .label{
+              font-size: 15px;
+            }
+            .char{
+              font-size: 8px;
+              margin-top: 6px;
+            }
+          }
+        }
+      }
+      &.right{
+        padding-left: 7px;
+        .plane{
+          height: 70px;
+          background-color: #FF6969;
+          border-radius: 5px;
+          display: flex;
+          align-items: center;
+          .left{
+            width: 75px;
+            .img{
+              width: 35px;
+              height: 35px;
+              display: block;
+              margin: 0 auto;
+            }
+          }
+          .right{
+            color: #fff;
+            flex: 1;
+            .label{
+              font-size: 15px;
+            }
+            .char{
+              font-size: 8px;
+              margin-top: 6px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .searchBar{
+    margin-top: 15px;
+    padding: 0 10px 10px 10px;
+    box-shadow:0px 2px 20px 0px rgba(0, 0, 0, 0.18);
+    border-radius:5px;
+    .timeBar{
+      display: flex;
+      align-items: center;
+      border-bottom: 1px solid #999;
+      .label{
+        margin-right: 4px;
+        height: 50px;
+        line-height: 54px;
+        border-bottom: 1px solid #3B81FA;
+      }
+      .char{
+        margin: 0 4px;
+      }
+      .dateItem{
+        width: 106px;
+        height: 28px;
+        display: inline-block;
+      }
+      .datePicker{
+        width: 106px;
+        height: 28px;
+        display: inline-block;
+        border: 1px solid #999;
+      }
+    }
+    .addressBar{
+      height: 50px;
+      align-items: center;
+      display: flex;
+      .left{
+        flex: 1;
+      }
+      .center{
+        width: 19px;
+        height: 19px;
+      }
+      .right{
+        flex: 1;
+        text-align: right;
+      }
+    }
+    .search{
+      width: 320px;
+      height: 30px;
+      line-height: 30px;
+      margin: 0 auto;
+      background-color: #3B81FA;
+      color: #fff;
+      text-align: center;
+      border-radius: 5px;
+    }
+  }
+}
+</style>
+<template>
+  <div class="home">
+    <div class="header">
+      <swiper
+        :autoplay="true"
+      >
+        <swiper-item>
+          <div  style="background-color: red;height: 160px"></div>
+        </swiper-item>
+        <swiper-item>
+          <div  style="background-color: blue;height: 160px"></div>
+        </swiper-item>
+      </swiper>
+      <div class="tabs">
+        <div class="tab left">
+          <div class="plane">
+            <div class="left">
+              <image class="img" src="http://49.235.226.232/cgi-bin/download.pl?fid=f15724322237033360004001&proj=pc"></image>
+            </div>
+            <div class="right">
+              <div class="label">人找车</div>
+              <div class="char">Looking for a car</div>
+            </div>
+          </div>
+        </div>
+        <div class="tab right">
+          <div class="plane">
+            <div class="left">
+              <image class="img" src="http://49.235.226.232/cgi-bin/download.pl?fid=f15724322237033360004001&proj=pc"></image>
+            </div>
+            <div class="right">
+              <div class="label">车找人</div>
+              <div class="char">Looking for a person</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="searchBar">
+        <div class="timeBar">
+          <div class="label">出发时间：</div> <picker class="dateItem" mode="date" value="{{startDate}}"  @change="startChange">
+          <div class="datePicker">
+            {{startDate}}
+          </div>
+        </picker>
+         <div class="char">-</div>
+          <picker class="dateItem" mode="date" value="{{endDate}}"  @change="endChange">
+            <div class="datePicker">
+              {{endDate}}
+            </div>
+          </picker>
+        </div>
+        <div class="addressBar">
+          <div class="left">
+            出发城市
+          </div>
+          <image class="center" src="http://49.235.226.232/cgi-bin/download.pl?fid=f15724419593777110576001&proj=pc">
+          </image>
+          <div class="right">
+            到达城市
+          </div>
+        </div>
+        <div class="search">
+          搜索
+        </div>
+
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+  import wepy from '@wepy/core'
+  import { mapState } from '@wepy/x';
+  import store from '../../store';
+
+  wepy.page({
+    store,
+    data: {
+      startDate:'',
+      endDate:''
+    },
+
+    computed: {
+      ...mapState([ 'counter' ])
+    },
+
+    methods: {
+      startChange(e){
+        this.startDate=e.$wx.detail.value
+      },
+      endChange(){
+
+      }
+    },
+    onShow() {
+    }
+  });
+</script>
+<config>
+{
+  navigationBarTitleText: '首页',
+  navigationBarBackgroundColor: '#1AA0FF',
+    usingComponents: {
+      myModal: '~@/components/modal',
+    baseModal: '~@/components/base-modal'
+    }
+}
+</config>

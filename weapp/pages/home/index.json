@@ -1,0 +1,9 @@
+{
+    "navigationBarTitleText": "首页",
+    "navigationBarBackgroundColor": "#1AA0FF",
+    "component": true,
+    "usingComponents": {
+        "myModal": "../../components/modal",
+        "baseModal": "../../components/base-modal"
+    }
+}

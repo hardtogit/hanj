@@ -1,0 +1,9 @@
+{
+    "navigationBarTitleText": "个人中心",
+    "navigationBarBackgroundColor": "#FFBB41",
+    "component": true,
+    "usingComponents": {
+        "myModal": "../../components/modal",
+        "baseModal": "../../components/base-modal"
+    }
+}

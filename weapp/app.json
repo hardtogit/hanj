@@ -1,0 +1,52 @@
+{
+    "pages": [
+        "pages/shop/detail",
+        "pages/shop/index",
+        "pages/home/index",
+        "pages/me/index",
+        "pages/post/index",
+        "pages/send/index"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#1AA0FF",
+        "navigationBarTitleText": "WeChat",
+        "navigationBarTextStyle": "white"
+    },
+    "tabBar": {
+        "color": "#999",
+        "selectedColor": "#1AA0FF",
+        "list": [
+            {
+                "pagePath": "pages/home/index",
+                "iconPath": "assets/img/home.png",
+                "selectedIconPath": "assets/img/homeH.png",
+                "text": "首页"
+            },
+            {
+                "pagePath": "pages/shop/index",
+                "iconPath": "assets/img/store.png",
+                "selectedIconPath": "assets/img/storeH.png",
+                "text": "积分商城"
+            },
+            {
+                "pagePath": "pages/send/index",
+                "iconPath": "assets/img/send.png",
+                "selectedIconPath": "assets/img/sendH.png",
+                "text": "发布"
+            },
+            {
+                "pagePath": "pages/post/index",
+                "iconPath": "assets/img/post.png",
+                "selectedIconPath": "assets/img/postH.png",
+                "text": "广告投放"
+            },
+            {
+                "pagePath": "pages/me/index",
+                "iconPath": "assets/img/me.png",
+                "selectedIconPath": "assets/img/meH.png",
+                "text": "我的"
+            }
+        ]
+    }
+}

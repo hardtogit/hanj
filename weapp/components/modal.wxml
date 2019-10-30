@@ -1,0 +1,18 @@
+
+<view hidden="{{ !(visible) }}" class="model">
+  <view class="container">
+    <view class="title">
+      {{title}}
+    </view>
+    <view class="content">
+      <slot></slot>
+    </view>
+    <view class="btns">
+      <view data-wpy-evt="13-0" bindtap="_proxy" class="btn left">{{cancelText}}</view>
+      <view class="btn right">{{okText}}</view>
+    </view>
+  </view>
+  <view class="bg">
+
+  </view>
+</view>
