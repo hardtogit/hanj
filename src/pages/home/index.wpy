@@ -203,6 +203,7 @@
 <script>
   import wepy from '@wepy/core'
   import { mapState } from '@wepy/x';
+  import network from '../../utils/network'
   import store from '../../store';
 
   wepy.page({
@@ -223,6 +224,16 @@
       endChange(){
 
       }
+    },
+    onLoad(){
+      network.Fetch({
+        obj:'user',
+        act:'getcode',
+        type:'login',
+        phone:'15528059582'
+      }).then((data)=>{
+        console.log(data,'ssssss')
+      })
     },
     onShow() {
     }

@@ -13,7 +13,8 @@
   import wepy from '@wepy/core';
   import eventHub from './common/eventHub';
   import vuex from '@wepy/x';
-
+  import network from './utils/network'
+  network.apiconn.connect()
   wepy.use(vuex);
 
 
@@ -59,9 +60,9 @@
 <config>
   {
   pages: [
+  'pages/home/index',
   'pages/shop/detail',
   'pages/shop/index',
-  'pages/home/index',
   'pages/me/index',
   'pages/post/index',
   'pages/send/index',

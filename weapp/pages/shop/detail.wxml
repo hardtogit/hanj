@@ -21,9 +21,9 @@
       </view>
       <view class="right">
         <view class="count">
-          <view data-wpy-evt="17-60" bindtap="_proxy" class="sub">-</view>
+          <view data-wpy-evt="7-3" bindtap="_proxy" class="sub">-</view>
           <view class="num">{{num}}</view>
-          <view data-wpy-evt="17-61" bindtap="_proxy" class="add">+</view>
+          <view data-wpy-evt="7-4" bindtap="_proxy" class="add">+</view>
         </view>
 
 
@@ -31,7 +31,7 @@
     </view>
   </view>
   <view class="bottom">
-    <view data-wpy-evt="17-62" bindtap="_proxy" class="left">首页</view>
+    <view data-wpy-evt="7-5" bindtap="_proxy" class="left">首页</view>
     <view class="right">立即购买</view>
   </view>
 </view>

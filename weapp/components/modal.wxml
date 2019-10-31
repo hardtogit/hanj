@@ -8,7 +8,7 @@
       <slot></slot>
     </view>
     <view class="btns">
-      <view data-wpy-evt="13-0" bindtap="_proxy" class="btn left">{{cancelText}}</view>
+      <view data-wpy-evt="15-0" bindtap="_proxy" class="btn left">{{cancelText}}</view>
       <view class="btn right">{{okText}}</view>
     </view>
   </view>

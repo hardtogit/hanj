@@ -157,3 +157,11 @@
   });
 
 </script>
+<config>
+  {
+  navigationBarTitleText: '商品详情',
+  usingComponents: {
+  goodsItem: '~@/components/goods-item',
+  }
+  }
+</config>

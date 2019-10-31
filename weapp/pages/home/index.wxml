@@ -36,13 +36,13 @@
 
     <view class="searchBar">
       <view class="timeBar">
-        <view class="label">出发时间：</view> <picker mode="date" value="{{startDate}}" data-wpy-evt="7-94" bindchange="_proxy" class="dateItem">
+        <view class="label">出发时间：</view> <picker mode="date" value="{{startDate}}" data-wpy-evt="9-8" bindchange="_proxy" class="dateItem">
         <view class="datePicker">
           {{startDate}}
         </view>
       </picker>
        <view class="char">-</view>
-        <picker mode="date" value="{{endDate}}" data-wpy-evt="7-95" bindchange="_proxy" class="dateItem">
+        <picker mode="date" value="{{endDate}}" data-wpy-evt="9-9" bindchange="_proxy" class="dateItem">
           <view class="datePicker">
             {{endDate}}
           </view>

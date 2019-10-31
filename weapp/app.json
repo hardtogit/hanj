@@ -1,8 +1,8 @@
 {
     "pages": [
+        "pages/home/index",
         "pages/shop/detail",
         "pages/shop/index",
-        "pages/home/index",
         "pages/me/index",
         "pages/post/index",
         "pages/send/index"
